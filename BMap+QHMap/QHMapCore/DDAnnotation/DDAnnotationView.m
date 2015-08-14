@@ -257,7 +257,7 @@
 	CGPoint newCenter;
 	
 	// If the user's finger moved more than 5 pixels, begin the drag.
-	if ((abs(newLocation.x - self.startLocation.x) > 5.0) || (abs(newLocation.y - self.startLocation.y) > 5.0)) {
+	if ((fabsf(newLocation.x - self.startLocation.x) > 5.0) || (fabsf(newLocation.y - self.startLocation.y) > 5.0)) {
 		self.isMoving = YES;
 	}
 	

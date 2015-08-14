@@ -38,7 +38,7 @@
     rotationAnimation.toValue             = [NSNumber numberWithFloat: M_PI * 2.0 ];
     [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     rotationAnimation.duration            = 1;
-    rotationAnimation.RepeatCount         = 100000;
+    rotationAnimation.repeatCount         = 100000;
     rotationAnimation.cumulative          = NO;
     rotationAnimation.removedOnCompletion = NO;
     rotationAnimation.fillMode            = kCAFillModeForwards;

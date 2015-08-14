@@ -560,7 +560,7 @@ typedef enum {
 
 - (void)initView {
     
-    self.view.BackgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     showWayBtnChoosedImages   = @[@"btnBus_choose",@"btnWalk_choose",@"btnCar_choose"];
     showWayBtnUnChooseImages = @[@"btnBus_unchoose",@"btnWalk_unchoose",@"btnCar_unchoose"];
     
@@ -572,8 +572,8 @@ typedef enum {
     chooseCustomPositionBtn  = [[UIButton alloc]initWithFrame:CGRectMake(35, 10, screenWidth-50, 30)];
     [chooseCustomPositionBtn addTarget:nil action:@selector(chooseLocationInMap) forControlEvents:UIControlEventTouchUpInside];
     
-    startLable.Font                     = [UIFont systemFontOfSize:13];
-    destinationLable.Font               = [UIFont systemFontOfSize:13];
+    startLable.font                     = [UIFont systemFontOfSize:13];
+    destinationLable.font               = [UIFont systemFontOfSize:13];
     startLable.textColor                = titleLableColor;
     destinationLable.textColor          = subTitleLableColor;
     startLable.text                     = @"正在为您定位";
@@ -656,11 +656,10 @@ typedef enum {
     }
     
     self->dataTableView =[[UITableView alloc] initWithFrame:CGRectMake(0, 184, screenWidth, screenHeight-164)];
-    dataTableView.separatorStyle  = UITableViewCellSeparatorStyleNone;
     dataTableView.delegate        = self;
     dataTableView.dataSource      = self;
     dataTableView.backgroundColor = [UIColor whiteColor];
-    
+    dataTableView.tableFooterView = [UIView new];
     [topView addSubview:btnView];
     [self.view addSubview:dataTableView];
     
